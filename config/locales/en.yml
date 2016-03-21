@@ -27,3 +27,33 @@ en:
     meta_tags:
       description: "Your Insider Zambia"
       keywords: "your, insider, zambia, where, those, in, the, know, go"
+
+
+
+
+
+
+
+
+  # Views
+  views:
+    application:
+      _navigation:
+        links:
+          about: "About us"
+          home: "Your Insider Zambia"
+          titles:
+            about: "Learn more about Your Insider Zambia"
+            home: "The Your Insider Zambia home page"
+
+
+
+
+
+
+
+
+
+    pages:
+      about:
+        title: "About Your Insider Zambia"
