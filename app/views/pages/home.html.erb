@@ -1,0 +1,30 @@
+<header>
+	<div class="column row">
+		<h1><%= title t("views.pages.home.title") %></h1>
+
+		<%= image_tag "logos/your_insider_zambia_logo-200x200.png" %>
+	</div>
+</header>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	$('#pages, body').vegas({
+		delay: 10000,
+		shuffle: true,
+		timer: false,
+		transitionDuration: 3000,
+		slides: [
+			{ src: "<%= asset_path "slides/slide-1.jpg" %>" },
+			{ src: "<%= asset_path "slides/slide-2.jpg" %>" },
+			{ src: "<%= asset_path "slides/slide-3.jpg" %>" },
+			{ src: "<%= asset_path "slides/slide-4.jpg" %>" },
+		]
+	});
+</script>
