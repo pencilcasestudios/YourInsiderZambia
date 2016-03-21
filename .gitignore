@@ -24,3 +24,9 @@
 
 # Ignore node modules
 node_modules
+
+
+# Don't version these assests
+# Serve them from an externalised source
+app/assets/images
+app/assets/pdfs
