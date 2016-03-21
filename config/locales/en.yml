@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  application:
+    client:
+      name: "Your Insider Zambia"
+      tagline: "Where those in the know go"
+    meta_tags:
+      description: "Your Insider Zambia"
+      keywords: "your, insider, zambia, where, those, in, the, know, go"

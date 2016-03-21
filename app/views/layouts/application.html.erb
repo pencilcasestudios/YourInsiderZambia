@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>YourInsiderZambia</title>
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
+    <%= render "viewport" %>
+
+    <%= display_meta_tags(default_meta_tags) %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-  </head>
 
-  <body>
-    <%= yield %>
+    <%= render "analytics" %>
+    <%= render "favicons" %>
+
+  </head>
+  <body id="<%= body_id %>" class="<%= yield(:body_class).present? ? yield(:body_class) : "page" %>">
+    <div class="container">
+      <%= render "navigation" %>
+
+      <%= render "notifications" %>
+
+      <%= yield %>
+    </div>
+
+    <%= render "footer" %>
+
   </body>
 </html>
