@@ -56,4 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # I want to use some Gems too!
-gem 'high_voltage', '~> 2.4'
+gem 'high_voltage', git: 'https://github.com/thoughtbot/high_voltage.git'
