@@ -55,21 +55,22 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-# I want to use some Gems too!
-gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
-gem 'high_voltage', git: 'https://github.com/thoughtbot/high_voltage.git'
-gem 'meta-tags', '~> 2.1'
-gem 'settingslogic', '~> 2.0', '>= 2.0.9'
-
-
-
-
-
-
-
-
-
 # Ref: https://rails-assets.org/
 source 'https://rails-assets.org' do
 	gem 'rails-assets-vegas'
 end
+
+
+
+
+
+
+
+
+
+# I want to use some Gems too!
+gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
+gem 'high_voltage', git: 'https://github.com/thoughtbot/high_voltage.git'
+gem 'meta-tags', '~> 2.1'
+gem 'roman-numerals', '~> 0.3.0'
+gem 'settingslogic', '~> 2.0', '>= 2.0.9'

@@ -40,7 +40,7 @@ en:
     application:
       _navigation:
         links:
-          about: "About us"
+          about: "About"
           home: "Your Insider Zambia"
           titles:
             about: "Learn more about Your Insider Zambia"
