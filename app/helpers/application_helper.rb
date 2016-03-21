@@ -16,7 +16,7 @@ module ApplicationHelper
       keywords: t("application.meta_tags.keywords"),
       prefix: " ",
       reverse: true,
-      site: t("application.name"),
+      site: t("application.client.name"),
       title: t("application.client.tagline"),
       open_graph: {
         description: t("application.meta_tags.description"),
