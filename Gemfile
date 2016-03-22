@@ -31,21 +31,25 @@ gem 'jbuilder', '~> 2.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+	# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+	gem 'byebug'
 
-  # Ref: http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
-	gem 'guard-rspec', '~> 4.6', '>= 4.6.4', require: false
+	# Ref: http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
+	# Ref: https://github.com/guard/guard-rspec/issues/360
+	gem 'rspec', '~> 3.5.0.beta2'
+	gem 'rspec-core', '~> 3.5.0.beta2'
+	gem 'rspec-rails', '~> 3.5.0.beta2'
+	gem 'guard-rspec', '~> 4.6', require: false
 	gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 3.0'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+	# Access an IRB console on exception pages or by using <%= console %> in views
+	gem 'web-console', '~> 3.0'
+	gem 'listen', '~> 3.0.5'
+	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+	gem 'spring'
+	gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
