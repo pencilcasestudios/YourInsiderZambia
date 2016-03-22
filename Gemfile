@@ -34,7 +34,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'rspec-rails', '>= 3.5.0.beta2'
+  # Ref: http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
+	gem 'guard-rspec', '~> 4.6', '>= 4.6.4', require: false
+	gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
 end
 
 group :development do
