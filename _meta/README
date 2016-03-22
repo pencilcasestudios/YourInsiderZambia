@@ -12,6 +12,9 @@ cd ~/Code/Rails/YourInsiderZambia/app/assets
 ln -nfs ~/Dropbox/Your\ Insider\ Zambia/Externalised\ Assets/Your\ Insider\ Zambia\ Website/Images/ images
 ln -nfs ~/Dropbox/Your\ Insider\ Zambia/Externalised\ Assets/Your\ Insider\ Zambia\ Website/PDFs/ pdfs
 
+cd ~/Code/Rails/YourInsiderZambia
+
+
 # Set up the hosts (/etc/hosts)
 127.0.0.1	yourinsiderzambia.dev		www.yourinsiderzambia.dev
 
