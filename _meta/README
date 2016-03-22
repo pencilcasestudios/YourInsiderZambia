@@ -79,21 +79,6 @@ wrk -t 16 -c 200 http://0.0.0.0:3000/
 
 
 
-# Administration
-#===============
-# Creating an administrator
-# In the Rails console, select the user:
-u = User.first
-u.admin?
-
-# Promote the user to administrator
-u.promote
-u.save
-u.admin?
-
-
-
-
 # Gem management
 #===============
 # MAINTAIN GEM BUNDLE
