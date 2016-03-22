@@ -41,9 +41,6 @@ gem 'jbuilder', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
 	# Call 'byebug' anywhere in the code to stop execution and get a debugger console
 	gem 'byebug'
@@ -57,6 +54,20 @@ group :development do
 	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 	gem 'spring'
 	gem 'spring-watcher-listen', '~> 2.0.0'
+
+
+	# Use Capistrano for deployment
+	gem 'capistrano-passenger', '~> 0.2.0'
+	gem 'capistrano-rails', '~> 1.1', '>= 1.1.6'
+	gem 'capistrano-rails-collection', '~> 0.0.3'
+	gem 'rvm1-capistrano3', '~> 1.4'
+
+	# Capistrano support
+	#gem 'capistrano3-monit', github: 'naps62/capistrano3-monit'
+	gem 'airbrussh', '~> 1.0', '>= 1.0.1'
+	gem 'capistrano-db-tasks', '~> 0.4'
+	gem 'capistrano-maintenance', '~> 1.0'
+	gem 'capistrano_deploy_lock', '~> 1.3', '>= 1.3.3'
 end
 
 group :test do
