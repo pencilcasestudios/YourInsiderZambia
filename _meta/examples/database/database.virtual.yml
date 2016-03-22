@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YourInsiderZambia_virtual_development
+  pool: 5
+  username: yourinsiderzambia
+  password: VirtualYourInsiderZambiaPassword
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YourInsiderZambia_virtual_test
+  pool: 5
+  username: yourinsiderzambia
+  password: VirtualYourInsiderZambiaPassword
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: YourInsiderZambia_virtual
+  pool: 5
+  username: yourinsiderzambia
+  password: VirtualYourInsiderZambiaPassword
+  host: localhost
