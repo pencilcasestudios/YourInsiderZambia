@@ -60,7 +60,7 @@ group :development do
 	gem 'capistrano-passenger', '~> 0.2.0'
 	gem 'capistrano-rails', '~> 1.1', '>= 1.1.6'
 	gem 'capistrano-rails-collection', '~> 0.0.3'
-	gem 'rvm1-capistrano3', '~> 1.4'
+	gem 'rvm1-capistrano3', '~> 1.4', require: false
 
 	# Capistrano support
 	#gem 'capistrano3-monit', github: 'naps62/capistrano3-monit'
@@ -112,3 +112,8 @@ gem 'high_voltage', git: 'https://github.com/thoughtbot/high_voltage.git'
 gem 'meta-tags', '~> 2.1'
 gem 'roman-numerals', '~> 0.3.0'
 gem 'settingslogic', '~> 2.0', '>= 2.0.9'
+
+
+# Allow SECRET_KEY_BASE to be defined in an environment variable (.env)
+# Ref: http://daniel.fone.net.nz/blog/2013/05/20/a-better-way-to-manage-the-rails-secret-token/
+gem 'dotenv-rails', '~> 2.1'
