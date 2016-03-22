@@ -65,7 +65,7 @@ group :development do
 	# Capistrano support
 	#gem 'capistrano3-monit', github: 'naps62/capistrano3-monit'
 	gem 'airbrussh', '~> 1.0', '>= 1.0.1'
-	gem 'capistrano-db-tasks', '~> 0.4'
+	gem 'capistrano-db-tasks', '~> 0.4', require: false
 	gem 'capistrano-maintenance', '~> 1.0'
 	gem 'capistrano_deploy_lock', '~> 1.3', '>= 1.3.3'
 end
