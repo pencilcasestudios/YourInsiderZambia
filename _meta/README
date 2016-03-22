@@ -69,6 +69,16 @@ http://localhost:3001
 
 
 
+# Benchmarking
+#==============
+# Ref: https://www.phusionpassenger.com/library/walkthroughs/basics/ruby/process_management.html
+# https://github.com/wg/wrk
+# https://github.com/wg/wrk/wiki/Installing-Wrk-on-Linux
+wrk -t 16 -c 200 http://0.0.0.0:3000/
+
+
+
+
 # Administration
 #===============
 # Creating an administrator
