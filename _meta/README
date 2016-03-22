@@ -497,13 +497,13 @@ create database YourInsiderZambia_staging_test;
 # Setup the YAML and .env configuration files:
 # From the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/config
-scp config.clientcase.net.yml deploy@asher.vps:~/config.yml
+scp config.yourinsiderzambia.clientcase.net.yml deploy@asher.vps:~/config.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/database
-scp database.clientcase.net.yml deploy@asher.vps:~/database.yml
+scp database.yourinsiderzambia.clientcase.net.yml deploy@asher.vps:~/database.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/env
-scp .env.clientcase.net deploy@asher.vps:~/.env
+scp .env.yourinsiderzambia.clientcase.net deploy@asher.vps:~/.env
 
 cd ~/Code/Rails/YourInsiderZambia/
 ssh deploy@asher.vps
