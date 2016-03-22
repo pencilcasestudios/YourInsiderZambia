@@ -45,7 +45,7 @@ require 'capistrano-db-tasks'
 require 'capistrano/maintenance'
 
 # Ref: https://github.com/ndbroadbent/capistrano_deploy_lock#installation
-require 'capistrano/deploy_lock'
+#require 'capistrano/deploy_lock'
 
 
 
