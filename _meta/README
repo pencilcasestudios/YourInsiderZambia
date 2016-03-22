@@ -58,14 +58,13 @@ bundle exec guard
 cd ~/Code/Rails/YourInsiderZambia
 rails server --port=3100 --binding=yourinsiderzambia.dev # In one terminal window - to run the application
 
+# BrowserSync
 cd ~/Code/Rails/YourInsiderZambia
-rake jobs:work # In another terminal window - to run delayed job
-
-cd ~/Code/Rails/YourInsiderZambia
-rails console # In another terminal window - to manage administrators
+browser-sync start --proxy localhost:3000 --files "app/**/*, config/locales/*.yml" --no-open
 
 # View the site in a browser by visiting
-http://yourinsiderzambia.dev:3100
+http://localhost:3001
+
 
 
 
