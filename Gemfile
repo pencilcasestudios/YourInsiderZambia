@@ -117,3 +117,16 @@ gem 'settingslogic', '~> 2.0', '>= 2.0.9'
 # Allow SECRET_KEY_BASE to be defined in an environment variable (.env)
 # Ref: http://daniel.fone.net.nz/blog/2013/05/20/a-better-way-to-manage-the-rails-secret-token/
 gem 'dotenv-rails', '~> 2.1'
+
+
+
+
+
+
+
+
+
+group :production do
+	gem 'mysql2', '~> 0.3.18'
+end
+
