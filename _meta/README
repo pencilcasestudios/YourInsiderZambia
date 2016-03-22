@@ -251,10 +251,10 @@ sudo openssl req -new -key yourinsiderzambia.virtual.key -out yourinsiderzambia.
 # Country Name: ZM
 # Province: Lusaka Province
 # Locality Name: Lusaka
-# Organisation Name: Galaunia Farms Limited
-# Orgnisational Unit Name: Roan Park
+# Organisation Name: Your Insider Zambia
+# Orgnisational Unit Name:
 # Common Name: yourinsiderzambia.virtual.
-# Email: itsupport@pencilcasestudios.com
+# Email: itsupport@yourinsiderzambia.com
 # Challenge password: <Blank>
 # Optional Company Name: <Blank>
 
@@ -457,10 +457,10 @@ sudo openssl req -new -key yourinsiderzambia.clientcase.net.key -out yourinsider
 # Country Name: ZM
 # Province: Lusaka Province
 # Locality Name: Lusaka
-# Organisation Name: Galaunia Farms Limited
-# Orgnisational Unit Name: Roan Park
+# Organisation Name: Your Insider Zambia
+# Orgnisational Unit Name:
 # Common Name: yourinsiderzambia.clientcase.net.
-# Email: itsupport@pencilcasestudios.com
+# Email: itsupport@yourinsiderzambia.com
 # Challenge password: <Blank>
 # Optional Company Name: <Blank>
 
@@ -663,10 +663,10 @@ sudo openssl req -new -key yourinsiderzambia.co.zm.key -out yourinsiderzambia.co
 # Country Name: ZM
 # Province: Lusaka Province
 # Locality Name: Lusaka
-# Organisation Name: Galaunia Farms Limited
-# Orgnisational Unit Name: Roan Park
+# Organisation Name: Your Insider Zambia
+# Orgnisational Unit Name:
 # Common Name: yourinsiderzambia.co.zm.
-# Email: itsupport@pencilcasestudios.com
+# Email: itsupport@yourinsiderzambia.com
 # Challenge password: <Blank>
 # Optional Company Name: <Blank>
 
