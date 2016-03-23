@@ -140,7 +140,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
-    mysql2 (0.3.20)
+    mysql2 (0.4.3)
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -259,9 +259,8 @@ GEM
     turbolinks-source (5.0.0.beta3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     web-console (3.1.1)
       activemodel (>= 4.2)
       debug_inspector
@@ -292,7 +291,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   meta-tags (~> 2.1)
-  mysql2 (~> 0.3.18)
+  mysql2 (~> 0.4.3)
   passenger (~> 5.0, >= 5.0.26)
   rails (>= 5.0.0.beta3, < 5.1)
   rails-assets-vegas!

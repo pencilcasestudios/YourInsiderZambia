@@ -127,6 +127,5 @@ gem 'dotenv-rails', '~> 2.1'
 
 
 group :production do
-	gem 'mysql2', '~> 0.3.18'
+	gem 'mysql2', '~> 0.4.3'
 end
-
