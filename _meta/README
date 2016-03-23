@@ -642,14 +642,14 @@ sudo chown deploy:deploy /var/AssetsVault
 # Configure nginx
 # On the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/nginx
-scp nginx.yourinsiderzambia.co.zm.conf silumesii@gad.vps:~/yourinsiderzambia.co.zm.conf
+scp nginx.yourinsiderzambia.com.conf silumesii@gad.vps:~/yourinsiderzambia.com.conf
 
 
 # On the production machine
 # Set up the nginx configuration
 ssh silumesii@gad.vps
-sudo mv ~/yourinsiderzambia.co.zm.conf /etc/nginx/sites-available
-sudo ln -nfs /etc/nginx/sites-available/yourinsiderzambia.co.zm.conf /etc/nginx/sites-enabled/yourinsiderzambia.co.zm
+sudo mv ~/yourinsiderzambia.com.conf /etc/nginx/sites-available
+sudo ln -nfs /etc/nginx/sites-available/yourinsiderzambia.com.conf /etc/nginx/sites-enabled/yourinsiderzambia.com
 
 
 # Generate an SSL certificate and key:
@@ -657,26 +657,26 @@ sudo mkdir -p /etc/nginx/ssl
 cd /etc/nginx/ssl
 sudo mkdir -p YourInsiderZambia
 cd YourInsiderZambia
-sudo openssl genrsa -des3 -out yourinsiderzambia.co.zm.key 1024
+sudo openssl genrsa -des3 -out yourinsiderzambia.com.key 1024
 
 # pass phrase: yourinsiderzambia
 
-sudo openssl req -new -key yourinsiderzambia.co.zm.key -out yourinsiderzambia.co.zm.csr
+sudo openssl req -new -key yourinsiderzambia.com.key -out yourinsiderzambia.com.csr
 
 # Country Name: ZM
 # Province: Lusaka Province
 # Locality Name: Lusaka
 # Organisation Name: Your Insider Zambia
 # Orgnisational Unit Name:
-# Common Name: yourinsiderzambia.co.zm.
+# Common Name: yourinsiderzambia.com.
 # Email: itsupport@yourinsiderzambia.com
 # Challenge password: <Blank>
 # Optional Company Name: <Blank>
 
-sudo cp yourinsiderzambia.co.zm.key yourinsiderzambia.co.zm.key.original
-sudo openssl rsa -in yourinsiderzambia.co.zm.key.original -out yourinsiderzambia.co.zm.key
+sudo cp yourinsiderzambia.com.key yourinsiderzambia.com.key.original
+sudo openssl rsa -in yourinsiderzambia.com.key.original -out yourinsiderzambia.com.key
 
-sudo openssl x509 -req -days 365 -in yourinsiderzambia.co.zm.csr -signkey yourinsiderzambia.co.zm.key -out yourinsiderzambia.co.zm.crt
+sudo openssl x509 -req -days 365 -in yourinsiderzambia.com.csr -signkey yourinsiderzambia.com.key -out yourinsiderzambia.com.crt
 
 
 # Test the nginx configuration:
@@ -703,13 +703,13 @@ create database YourInsiderZambia_production_test;
 # Setup the YAML and .env configuration files:
 # From the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/config
-scp config.yourinsiderzambia.co.zm.yml deploy@gad.vps:~/config.yml
+scp config.yourinsiderzambia.com.yml deploy@gad.vps:~/config.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/database
-scp database.yourinsiderzambia.co.zm.yml deploy@gad.vps:~/database.yml
+scp database.yourinsiderzambia.com.yml deploy@gad.vps:~/database.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/env
-scp .env.yourinsiderzambia.co.zm deploy@gad.vps:~/.env
+scp .env.yourinsiderzambia.com deploy@gad.vps:~/.env
 
 cd ~/Code/Rails/YourInsiderZambia/
 ssh deploy@gad.vps
