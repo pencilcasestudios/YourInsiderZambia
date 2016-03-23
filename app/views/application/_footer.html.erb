@@ -1,9 +1,11 @@
 <div class="column row">
 	<footer>
 		<p>
-			&copy; <%= RomanNumerals.to_roman(Time.zone.now.year) %> <%= link_to t("application.client.name"), root_path, title: t("application.client.name") %> |
-			<!-- <%= t("views.application._footer.copy.website_by") %> <%= link_to t("application.developer.name"), t("application.developer.url"), title: t("views.application._footer.link.title.developer") %> | -->
-			<%= link_to t("views.application._navigation.links.about"), page_path('about'), title: t("views.application._navigation.links.titles.about") %>
+			&copy; <%= RomanNumerals.to_roman(Time.zone.now.year) %> <%= link_to t("application.client.name"), root_path, title: t("application.client.name") %>
+			<!-- | -->
+			<!-- <%= t("views.application._footer.copy.website_by") %> <%= link_to t("application.developer.name"), t("application.developer.url"), title: t("views.application._footer.link.title.developer") %> -->
+			<!-- | -->
+			<!-- <%= link_to t("views.application._navigation.links.about"), page_path('about'), title: t("views.application._navigation.links.titles.about") %> -->
 		</p>
 	</footer>
 </div>
