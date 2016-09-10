@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta3', '< 5.1'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -108,7 +108,7 @@ end
 
 # I want to use some Gems too!
 gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
-gem 'high_voltage', git: 'https://github.com/thoughtbot/high_voltage.git'
+gem 'high_voltage', '~> 3.0.0'
 gem 'meta-tags', '~> 2.1'
 gem 'roman-numerals', '~> 0.3.0'
 gem 'settingslogic', '~> 2.0', '>= 2.0.9'
