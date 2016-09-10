@@ -7,10 +7,22 @@ cp _meta/examples/database/database.yml config # Setup the database
 cp _meta/examples/config/config.yml config # Setup the configuration files
 cp -r _meta/examples/capistrano/deploy* config # Setup the capistrano deployment recipe
 
+
 # Set up symbolic link to externlised assets
 cd ~/Code/Rails/YourInsiderZambia/app/assets
 ln -nfs ~/Dropbox/Your\ Insider\ Zambia/Externalised\ Assets/Your\ Insider\ Zambia\ Website/Images/ images
 ln -nfs ~/Dropbox/Your\ Insider\ Zambia/Externalised\ Assets/Your\ Insider\ Zambia\ Website/PDFs/ pdfs
+
+
+# Bundler
+cd ~/Code/Rails/YourInsiderZambia
+gem install bundler
+
+
+# BrowserSync
+cd ~/Code/Rails/YourInsiderZambia
+npm install browser-sync
+
 
 cd ~/Code/Rails/YourInsiderZambia
 
