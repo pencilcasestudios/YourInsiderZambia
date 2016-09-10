@@ -19,9 +19,9 @@ cd ~/Code/Rails/YourInsiderZambia
 127.0.0.1	yourinsiderzambia.dev		www.yourinsiderzambia.dev
 
 # Setup deployment references:
-git remote add virtual deploy@rails.vm:/var/Repositories/Git/YourInsiderZambia.git
-git remote add staging deploy@asher.vps:/var/Repositories/Git/YourInsiderZambia.git
-git remote add production deploy@gad.vps:/var/Repositories/Git/YourInsiderZambia.git
+git remote add virtual deploy@rails.pcsvm:/var/Repositories/Git/YourInsiderZambia.git
+git remote add staging deploy@asher.pcsvps:/var/Repositories/Git/YourInsiderZambia.git
+git remote add production deploy@gad.pcsvps:/var/Repositories/Git/YourInsiderZambia.git
 
 
 
@@ -168,40 +168,40 @@ notify-send "Production stage deployed"
 
 
 # Test SSH access:
-ssh deploy@rails.vm
-ssh vladimir@rails.vm
+ssh deploy@rails.pcsvm
+ssh vladimir@rails.pcsvm
 
 # Set up the hosts (/etc/hosts):
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 
 # Make sure the following line is in /etc/hosts:
-127.0.0.1 rails.vm
+127.0.0.1 rails.pcsvm
 
 # Test with
-ping rails.vm
+ping rails.pcsvm
 
 
 # Check that SSH "loops back" on the virtual machine (host key verification):
 # On the local development machine
-ssh deploy@rails.vm
+ssh deploy@rails.pcsvm
 
 # On the virtual machine
-ssh deploy@rails.vm
+ssh deploy@rails.pcsvm
 
 # Or
 
 # If the "loop back" fails:
 ssh-keygen
-ssh-copy-id deploy@rails.vm
+ssh-copy-id deploy@rails.pcsvm
 
 
 # Set up the Repository folder
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 sudo mkdir -p /var/Repositories/Git
 sudo chown deploy:deploy /var/Repositories
 
 # Create the Git repository:
-ssh deploy@rails.vm
+ssh deploy@rails.pcsvm
 cd /var/Repositories/Git/
 mkdir -p YourInsiderZambia.git
 cd YourInsiderZambia.git
@@ -211,18 +211,18 @@ exit
 # Push to the Git repository:
 # From the development machine:
 cd ~/Code/Rails/YourInsiderZambia
-git remote add virtual deploy@rails.vm:/var/Repositories/Git/YourInsiderZambia.git
+git remote add virtual deploy@rails.pcsvm:/var/Repositories/Git/YourInsiderZambia.git
 git push virtual master # or git push virtual
 
 
 # Set up the Apps folder
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 sudo mkdir -p /var/Apps
 sudo chown deploy:deploy /var/Apps
 
 
 # Create the AssetsVault folder
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 sudo mkdir -p /var/AssetsVault
 sudo chown deploy:deploy /var/AssetsVault
 
@@ -230,12 +230,12 @@ sudo chown deploy:deploy /var/AssetsVault
 # Configure nginx
 # On the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/nginx
-scp nginx.yourinsiderzambia.virtual.conf vladimir@rails.vm:~/yourinsiderzambia.virtual.conf
+scp nginx.yourinsiderzambia.virtual.conf vladimir@rails.pcsvm:~/yourinsiderzambia.virtual.conf
 
 
 # On the virtual machine
 # Set up the nginx configuration
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 sudo mv ~/yourinsiderzambia.virtual.conf /etc/nginx/sites-available
 sudo ln -nfs /etc/nginx/sites-available/yourinsiderzambia.virtual.conf /etc/nginx/sites-enabled/yourinsiderzambia.virtual
 
@@ -274,7 +274,7 @@ sudo service nginx configtest
 sudo service nginx reload
 
 # Setup the MariaDB database user:
-ssh vladimir@rails.vm
+ssh vladimir@rails.pcsvm
 mysql -u root -p
 create user 'yourinsiderzambia'@'localhost' identified by 'VirtualYourInsiderZambiaPassword';
 grant all on YourInsiderZambia_virtual.* to 'yourinsiderzambia'@'localhost';
@@ -291,16 +291,16 @@ create database YourInsiderZambia_virtual_test;
 # Setup the YAML and .env configuration files:
 # From the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/config
-scp config.virtual.yml deploy@rails.vm:~/config.yml
+scp config.virtual.yml deploy@rails.pcsvm:~/config.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/database
-scp database.virtual.yml deploy@rails.vm:~/database.yml
+scp database.virtual.yml deploy@rails.pcsvm:~/database.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/env
-scp .env.virtual deploy@rails.vm:~/.env
+scp .env.virtual deploy@rails.pcsvm:~/.env
 
 cd ~/Code/Rails/YourInsiderZambia/
-ssh deploy@rails.vm
+ssh deploy@rails.pcsvm
 
 # From the virtual machine (as the deploy user)
 cd
@@ -324,7 +324,7 @@ cap virtual deploy:check # Update configuration files and create the database af
 
 # From the virtual machine (as the deploy user)
 # After running cap virtual deploy:check
-ssh deploy@rails.vm
+ssh deploy@rails.pcsvm
 cd ~/Projects/Configurations/YourInsiderZambia/virtual
 
 cp *.yml /var/Apps/YourInsiderZambia/virtual/shared/config/
@@ -374,40 +374,40 @@ sudo service monit reload
 
 
 # Test SSH access:
-ssh deploy@asher.vps
-ssh silumesii@asher.vps
+ssh deploy@asher.pcsvps
+ssh silumesii@asher.pcsvps
 
 # Set up the hosts (/etc/hosts):
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 
 # Make sure the following line is in /etc/hosts:
-127.0.0.1 asher.vps
+127.0.0.1 asher.pcsvps
 
 # Test with
-ping asher.vps
+ping asher.pcsvps
 
 
 # Check that SSH "loops back" on the staging machine (host key verification):
 # On the local development machine
-ssh deploy@asher.vps
+ssh deploy@asher.pcsvps
 
 # On the staging machine
-ssh deploy@asher.vps
+ssh deploy@asher.pcsvps
 
 # Or
 
 # If the "loop back" fails:
 ssh-keygen
-ssh-copy-id deploy@asher.vps
+ssh-copy-id deploy@asher.pcsvps
 
 
 # Set up the Repository folder
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 sudo mkdir -p /var/Repositories/Git
 sudo chown deploy:deploy /var/Repositories
 
 # Create the Git repository:
-ssh deploy@asher.vps
+ssh deploy@asher.pcsvps
 cd /var/Repositories/Git/
 mkdir -p YourInsiderZambia.git
 cd YourInsiderZambia.git
@@ -417,18 +417,18 @@ exit
 # Push to the Git repository:
 # From the development machine:
 cd ~/Code/Rails/YourInsiderZambia
-git remote add staging deploy@asher.vps:/var/Repositories/Git/YourInsiderZambia.git
+git remote add staging deploy@asher.pcsvps:/var/Repositories/Git/YourInsiderZambia.git
 git push staging master # or git push staging
 
 
 # Set up the Apps folder
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 sudo mkdir -p /var/Apps
 sudo chown deploy:deploy /var/Apps
 
 
 # Create the AssetsVault folder
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 sudo mkdir -p /var/AssetsVault
 sudo chown deploy:deploy /var/AssetsVault
 
@@ -436,12 +436,12 @@ sudo chown deploy:deploy /var/AssetsVault
 # Configure nginx
 # On the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/nginx
-scp nginx.yourinsiderzambia.clientcase.net.conf silumesii@asher.vps:~/yourinsiderzambia.clientcase.net.conf
+scp nginx.yourinsiderzambia.clientcase.net.conf silumesii@asher.pcsvps:~/yourinsiderzambia.clientcase.net.conf
 
 
 # On the staging machine
 # Set up the nginx configuration
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 sudo mv ~/yourinsiderzambia.clientcase.net.conf /etc/nginx/sites-available
 sudo ln -nfs /etc/nginx/sites-available/yourinsiderzambia.clientcase.net.conf /etc/nginx/sites-enabled/yourinsiderzambia.clientcase.net
 
@@ -480,7 +480,7 @@ sudo service nginx configtest
 sudo service nginx reload
 
 # Setup the MariaDB database user:
-ssh silumesii@asher.vps
+ssh silumesii@asher.pcsvps
 mysql -u root -p
 create user 'yourinsiderzambia'@'localhost' identified by 'StagingYourInsiderZambiaPassword';
 grant all on YourInsiderZambia_staging.* to 'yourinsiderzambia'@'localhost';
@@ -497,16 +497,16 @@ create database YourInsiderZambia_staging_test;
 # Setup the YAML and .env configuration files:
 # From the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/config
-scp config.yourinsiderzambia.clientcase.net.yml deploy@asher.vps:~/config.yml
+scp config.yourinsiderzambia.clientcase.net.yml deploy@asher.pcsvps:~/config.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/database
-scp database.yourinsiderzambia.clientcase.net.yml deploy@asher.vps:~/database.yml
+scp database.yourinsiderzambia.clientcase.net.yml deploy@asher.pcsvps:~/database.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/env
-scp .env.yourinsiderzambia.clientcase.net deploy@asher.vps:~/.env
+scp .env.yourinsiderzambia.clientcase.net deploy@asher.pcsvps:~/.env
 
 cd ~/Code/Rails/YourInsiderZambia/
-ssh deploy@asher.vps
+ssh deploy@asher.pcsvps
 
 # From the staging machine (as the deploy user)
 cd
@@ -530,7 +530,7 @@ cap staging deploy:check # Update configuration files and create the database af
 
 # From the staging machine (as the deploy user)
 # After running cap staging deploy:check
-ssh deploy@asher.vps
+ssh deploy@asher.pcsvps
 cd ~/Projects/Configurations/YourInsiderZambia/staging
 
 cp *.yml /var/Apps/YourInsiderZambia/staging/shared/config/
@@ -580,40 +580,40 @@ sudo service monit reload
 
 
 # Test SSH access:
-ssh deploy@gad.vps
-ssh silumesii@gad.vps
+ssh deploy@gad.pcsvps
+ssh silumesii@gad.pcsvps
 
 # Set up the hosts (/etc/hosts):
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 
 # Make sure the following line is in /etc/hosts:
-127.0.0.1 gad.vps
+127.0.0.1 gad.pcsvps
 
 # Test with
-ping gad.vps
+ping gad.pcsvps
 
 
 # Check that SSH "loops back" on the production machine (host key verification):
 # On the local development machine
-ssh deploy@gad.vps
+ssh deploy@gad.pcsvps
 
 # On the production machine
-ssh deploy@gad.vps
+ssh deploy@gad.pcsvps
 
 # Or
 
 # If the "loop back" fails:
 ssh-keygen
-ssh-copy-id deploy@gad.vps
+ssh-copy-id deploy@gad.pcsvps
 
 
 # Set up the Repository folder
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 sudo mkdir -p /var/Repositories/Git
 sudo chown deploy:deploy /var/Repositories
 
 # Create the Git repository:
-ssh deploy@gad.vps
+ssh deploy@gad.pcsvps
 cd /var/Repositories/Git/
 mkdir -p YourInsiderZambia.git
 cd YourInsiderZambia.git
@@ -623,18 +623,18 @@ exit
 # Push to the Git repository:
 # From the development machine:
 cd ~/Code/Rails/YourInsiderZambia
-git remote add production deploy@gad.vps:/var/Repositories/Git/YourInsiderZambia.git
+git remote add production deploy@gad.pcsvps:/var/Repositories/Git/YourInsiderZambia.git
 git push production master # or git push production
 
 
 # Set up the Apps folder
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 sudo mkdir -p /var/Apps
 sudo chown deploy:deploy /var/Apps
 
 
 # Create the AssetsVault folder
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 sudo mkdir -p /var/AssetsVault
 sudo chown deploy:deploy /var/AssetsVault
 
@@ -642,12 +642,12 @@ sudo chown deploy:deploy /var/AssetsVault
 # Configure nginx
 # On the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/nginx
-scp nginx.yourinsiderzambia.com.conf silumesii@gad.vps:~/yourinsiderzambia.com.conf
+scp nginx.yourinsiderzambia.com.conf silumesii@gad.pcsvps:~/yourinsiderzambia.com.conf
 
 
 # On the production machine
 # Set up the nginx configuration
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 sudo mv ~/yourinsiderzambia.com.conf /etc/nginx/sites-available
 sudo ln -nfs /etc/nginx/sites-available/yourinsiderzambia.com.conf /etc/nginx/sites-enabled/yourinsiderzambia.com
 
@@ -686,7 +686,7 @@ sudo service nginx configtest
 sudo service nginx reload
 
 # Setup the MariaDB database user:
-ssh silumesii@gad.vps
+ssh silumesii@gad.pcsvps
 mysql -u root -p
 create user 'yourinsiderzambia'@'localhost' identified by 'ProductionYourInsiderZambiaPassword';
 grant all on YourInsiderZambia_production.* to 'yourinsiderzambia'@'localhost';
@@ -703,16 +703,16 @@ create database YourInsiderZambia_production_test;
 # Setup the YAML and .env configuration files:
 # From the development machine
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/config
-scp config.yourinsiderzambia.com.yml deploy@gad.vps:~/config.yml
+scp config.yourinsiderzambia.com.yml deploy@gad.pcsvps:~/config.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/database
-scp database.yourinsiderzambia.com.yml deploy@gad.vps:~/database.yml
+scp database.yourinsiderzambia.com.yml deploy@gad.pcsvps:~/database.yml
 
 cd ~/Code/Rails/YourInsiderZambia/_meta/examples/env
-scp .env.yourinsiderzambia.com deploy@gad.vps:~/.env
+scp .env.yourinsiderzambia.com deploy@gad.pcsvps:~/.env
 
 cd ~/Code/Rails/YourInsiderZambia/
-ssh deploy@gad.vps
+ssh deploy@gad.pcsvps
 
 # From the production machine (as the deploy user)
 cd
@@ -736,7 +736,7 @@ cap production deploy:check # Update configuration files and create the database
 
 # From the production machine (as the deploy user)
 # After running cap production deploy:check
-ssh deploy@gad.vps
+ssh deploy@gad.pcsvps
 cd ~/Projects/Configurations/YourInsiderZambia/production
 
 cp *.yml /var/Apps/YourInsiderZambia/production/shared/config/

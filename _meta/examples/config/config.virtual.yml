@@ -20,19 +20,19 @@ defaults: &defaults
   # Virtual deployment
   virtual_deployment_path: virtual
   virtual_repository_deployment_branch: master
-  virtual_server_name: rails.vm
+  virtual_server_name: rails.pcsvm
   virtual_stage_name: virtual
 
   # Staging deployment
   staging_deployment_path: staging
   staging_repository_deployment_branch: master
-  staging_server_name: asher.vps
+  staging_server_name: asher.pcsvps
   staging_stage_name: staging
 
   # Production deployment
   production_deployment_path: production
   production_repository_deployment_branch: master
-  production_server_name: gad.vps
+  production_server_name: gad.pcsvps
   production_stage_name: production
 
   # Asset vault
