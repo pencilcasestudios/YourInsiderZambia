@@ -63,7 +63,7 @@ rails server --port=3100 --binding=yourinsiderzambia.dev # In one terminal windo
 
 # BrowserSync
 cd ~/Code/Rails/YourInsiderZambia
-browser-sync start --proxy localhost:3000 --files "app/**/*, config/locales/*.yml" --no-open
+browser-sync start --proxy localhost:3100 --files "app/**/*, config/locales/*.yml" --no-open
 
 # View the site in a browser by visiting
 http://localhost:3001
