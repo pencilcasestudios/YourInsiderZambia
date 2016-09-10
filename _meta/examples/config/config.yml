@@ -9,6 +9,7 @@ defaults: &defaults
 
   application_name: YourInsiderZambia
   applications_folder: "/var/Apps"
+  code_folder: "~/Code/Rails"
   gemset_name: yourinsiderzambia-rails.5.x
   ruby_version: ruby-2.3.1
   deploy_user: deploy

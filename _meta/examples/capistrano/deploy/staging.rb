@@ -27,8 +27,8 @@ namespace :deploy do
 	task :sync_assets do
 		# Upload assets to the AssetsVault
 		run_locally do
-			execute "rsync --verbose --stats --progress --compress --archive --partial --recursive --times --perms --links --delete --exclude '.*' --delete-excluded ~/Projects/Rails/#{fetch(:application)}/app/assets/images/ #{fetch(:deploy_user)}@#{DEPLOYMENT_CONFIG["staging_server_name"]}:#{fetch(:asset_vault_path)}/#{fetch(:application)}/Images/"
-			execute "rsync --verbose --stats --progress --compress --archive --partial --recursive --times --perms --links --delete --exclude '.*' --delete-excluded ~/Projects/Rails/#{fetch(:application)}/app/assets/pdfs/ #{fetch(:deploy_user)}@#{DEPLOYMENT_CONFIG["staging_server_name"]}:#{fetch(:asset_vault_path)}/#{fetch(:application)}/PDFs/"
+			execute "rsync --verbose --stats --progress --compress --archive --partial --recursive --times --perms --links --delete --exclude '.*' --delete-excluded ~/Code/Rails/#{fetch(:application)}/app/assets/images/ #{fetch(:deploy_user)}@#{DEPLOYMENT_CONFIG["staging_server_name"]}:#{fetch(:asset_vault_path)}/#{fetch(:application)}/Images/"
+			execute "rsync --verbose --stats --progress --compress --archive --partial --recursive --times --perms --links --delete --exclude '.*' --delete-excluded ~/Code/Rails/#{fetch(:application)}/app/assets/pdfs/ #{fetch(:deploy_user)}@#{DEPLOYMENT_CONFIG["staging_server_name"]}:#{fetch(:asset_vault_path)}/#{fetch(:application)}/PDFs/"
 		end
 
 		# Copy assets from the AssetsVault to the shared assets path for the deployed application
