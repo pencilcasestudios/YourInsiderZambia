@@ -41,7 +41,7 @@ bundle install
 
 # Bundle update
 cd ~/Code/Rails/YourInsiderZambia
-bundle update --verbose
+bundle update
 gem cleanup
 notify-send "Bundle updated"
 
@@ -63,7 +63,7 @@ rails server --port=3100 --binding=yourinsiderzambia.dev # In one terminal windo
 
 # BrowserSync
 cd ~/Code/Rails/YourInsiderZambia
-browser-sync start --proxy localhost:3100 --files "app/**/*, config/locales/*.yml" --no-open
+./node_modules/browser-sync/bin/browser-sync.js start --proxy localhost:3100 --files "app/**/*, config/locales/*.yml" --no-open
 
 # View the site in a browser by visiting
 http://localhost:3001
