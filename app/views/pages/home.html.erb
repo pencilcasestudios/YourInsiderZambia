@@ -1,10 +1,24 @@
-<header>
-	<div class="column row">
-		<h1><%= t("views.pages.home.title") %></h1>
+<div class="row">
+	<div class="small-12 medium-12 large-10 large-offset-1 columns">
+		<section class="welcome">
 
-		<%= image_tag "logos/your_insider_zambia_logo-200x200.png" %>
+			<h2>About Us</h2>
+
+			<section>
+				<div class="row">
+					<div class="large-8 columns">
+						<p>Your Insider Zambia is an authorative review based website that is more like a local friend guiding you to sights and places known to insiders.</p>
+						<p>Our emphasis is <strong class="aal"><first-letter>a</first-letter>dventure</strong>, <strong class="aal"><first-letter>a</first-letter>ccomodation</strong> and <strong class="aal"><first-letter>l</first-letter>ocation</strong> &mdash; <em>The <span class="aal">AAL</span> platform</em>.</p>
+						<p>This site is for those seeking a unique travel and <strong>tailor made travel experience</strong>. Its <strong>interactive and holistic</strong> nature seeks to give the traveller a taste of Zambia in all its paradox and beauty.</p>
+					</div>
+					<div class="large-4 columns">
+						<%= image_tag "logos/your_insider_zambia_logo-200x200.png" %>
+					</div>
+				</div>
+			</section>
+		</section>
 	</div>
-</header>
+</div>
 
 
 
@@ -16,7 +30,7 @@
 
 <!-- Newsletter signup -->
 <div class="row">
-	<div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns ">
+	<div class="small-12 medium-12 large-10 large-offset-1 columns">
 
 		<div class="mailling-list-signup">
 
@@ -57,7 +71,7 @@
 
 <script type="text/javascript">
 	$('#pages, body').vegas({
-		delay: 20000,
+		delay: 5000,
 		shuffle: true,
 		timer: false,
 		transitionDuration: 3000,

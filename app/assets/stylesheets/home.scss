@@ -2,13 +2,58 @@
 @import "common";
 
 
+h2 {
+	color: $white;
+	text-shadow: 1px 1px 1px #000000;
+	border-top: 1px solid $white;
+	/* border-bottom: 1px solid $white_smoke; */
+	font-size: 4em;
+	text-align: center;
+}
 
-header {
-	padding-top: 2rem;
-	text-align: right;
 
-	h1 {
-		display: none;
+form {
+	label {
+		font-size: 2em;
+	}
+}
+
+
+strong {
+	first-letter {
+		color: $red;
+		text-transform: uppercase;
+		text-transform: capitalize;
+	}
+}
+
+
+span {
+	&.aal {
+		color: $red;
+		font-weight: bold;
+	}
+}
+
+section {
+	&.welcome {
+			padding-top: 22em;
+
+			div {
+				&.row {
+
+				}
+			}
+	}
+
+
+	section {
+		background: white;
+		padding: 1em;
+
+		p {
+			color: #333333;
+		}
 	}
 }
 
@@ -16,7 +61,7 @@ header {
 	padding-top: 5rem;
 	text-align: center;
 	color: $white_smoke;
-	text-shadow: 2px 2px 4px #000000;
+	text-shadow: 1px 1px 1px #000000;
 
 	label {
 		color: $white_smoke;
