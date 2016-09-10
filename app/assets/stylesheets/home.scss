@@ -12,6 +12,16 @@ h2 {
 }
 
 
+h3 {
+	color: $white;
+	text-shadow: 1px 1px 1px #000000;
+	border-top: 1px solid $white;
+	/* border-bottom: 1px solid $white_smoke; */
+	font-size: 2em;
+	text-align: center;
+}
+
+
 form {
 	label {
 		font-size: 2em;
@@ -35,27 +45,33 @@ span {
 	}
 }
 
+
 section {
-	&.welcome {
-			padding-top: 22em;
+	section {
+		&.welcome {
+				padding-top: 22em;
 
-			div {
-				&.row {
-
+				section {
+					background: $white;
+					padding: 1em;
 				}
 			}
 	}
 
+	&.promotions {
+		padding-top: 10em;
 
-	section {
-		background: white;
-		padding: 1em;
-
-		p {
-			color: #333333;
+		section {
+			background: $white;
+			padding: 1em;
 		}
 	}
+
+	&.newsletter {
+		padding-top: 10em;
+	}
 }
+
 
 .mailling-list-signup {
 	padding-top: 5rem;
