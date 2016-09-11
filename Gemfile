@@ -94,7 +94,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # I want to use some Gems too!
-gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
+#gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
+gem 'foundation-rails', '~> 6.2', '>= 6.2.3.0'
 gem 'high_voltage', '~> 3.0.0'
 gem 'meta-tags', '~> 2.1'
 gem 'roman-numerals', '~> 0.3.0'
