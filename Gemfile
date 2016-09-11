@@ -93,25 +93,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-# Ref: https://rails-assets.org/
-source 'https://rails-assets.org' do
-	gem 'rails-assets-vegas'
-end
-
-
-
-
-
-
-
-
-
 # I want to use some Gems too!
 gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
 gem 'high_voltage', '~> 3.0.0'
 gem 'meta-tags', '~> 2.1'
 gem 'roman-numerals', '~> 0.3.0'
 gem 'settingslogic', '~> 2.0', '>= 2.0.9'
+gem 'rails-assets-vegas', source: 'https://rails-assets.org'
 
 
 # Allow SECRET_KEY_BASE to be defined in an environment variable (.env)
