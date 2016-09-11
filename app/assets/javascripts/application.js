@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require vegas
 //= require jquery
+//= require vegas
 //= require jquery_ujs
-//= require foundation
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+//= require foundation
+$(document).foundation();

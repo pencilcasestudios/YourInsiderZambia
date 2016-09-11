@@ -108,16 +108,19 @@
 
 
 
+
 <script type="text/javascript">
-	$('#pages, body').vegas({
-		delay: 5000,
-		shuffle: true,
-		timer: false,
-		transitionDuration: 3000,
-		slides: [
-			{ src: "<%= asset_path "slides/tongabezi_sandbar_dinner.jpg" %>" },
-			{ src: "<%= asset_path "slides/lilayi_lodge_deluxe_chalets.jpg" %>" },
-			{ src: "<%= asset_path "slides/chiawa_tiger_fish.jpg" %>" },
-		]
+	$(function() {
+		$('#pages, body').vegas({
+			delay: 5000,
+			shuffle: true,
+			timer: false,
+			transitionDuration: 3000,
+			slides: [
+				{ src: "<%= asset_path "slides/tongabezi_sandbar_dinner.jpg" %>" },
+				{ src: "<%= asset_path "slides/lilayi_lodge_deluxe_chalets.jpg" %>" },
+				{ src: "<%= asset_path "slides/chiawa_tiger_fish.jpg" %>" },
+			]
+		});
 	});
 </script>
