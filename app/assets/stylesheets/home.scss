@@ -49,7 +49,7 @@ span {
 section {
 	section {
 		&.welcome {
-				padding-top: 22em;
+				/* padding-top: 22em; */
 
 				section {
 					background: $white;
@@ -82,4 +82,9 @@ section {
 	label {
 		color: $white_smoke;
 	}
+}
+
+
+#slides {
+	height: 300px;
 }
