@@ -2,21 +2,13 @@
 @import "common";
 
 
-h2 {
-	color: $white;
-	text-shadow: 1px 1px 1px #000000;
-	border-top: 1px solid $white;
-	/* border-bottom: 1px solid $white_smoke; */
+h1 {
 	font-size: 4em;
 	text-align: center;
 }
 
 
-h3 {
-	color: $white;
-	text-shadow: 1px 1px 1px #000000;
-	border-top: 1px solid $white;
-	/* border-bottom: 1px solid $white_smoke; */
+h2 {
 	font-size: 2em;
 	text-align: center;
 }
@@ -52,7 +44,6 @@ section {
 				/* padding-top: 22em; */
 
 				section {
-					background: $white;
 					padding: 1em;
 				}
 			}
@@ -62,7 +53,6 @@ section {
 		padding-top: 10em;
 
 		section {
-			background: $white;
 			padding: 1em;
 		}
 	}
@@ -76,15 +66,12 @@ section {
 .mailling-list-signup {
 	padding-top: 5rem;
 	text-align: center;
-	color: $white_smoke;
-	text-shadow: 1px 1px 1px #000000;
 
 	label {
-		color: $white_smoke;
 	}
 }
 
 
 #slides {
-	height: 400px;
+	height: 420px;
 }
