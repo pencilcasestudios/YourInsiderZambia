@@ -71,11 +71,11 @@ bundle exec guard
 # Running the Application in development
 #=======================================
 cd ~/Code/Rails/YourInsiderZambia
-rails server --port=3100 --binding=yourinsiderzambia.dev # In one terminal window - to run the application
+rails server --port=3346 --binding=yourinsiderzambia.dev # In one terminal window - to run the application
 
 # BrowserSync
 cd ~/Code/Rails/YourInsiderZambia
-./node_modules/browser-sync/bin/browser-sync.js start --proxy localhost:3100 --files "app/**/*, config/locales/*.yml" --no-open
+./node_modules/browser-sync/bin/browser-sync.js start --proxy localhost:3346 --files "app/**/*, config/locales/*.yml" --no-open
 
 # View the site in a browser by visiting
 http://localhost:3001
