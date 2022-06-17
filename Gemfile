@@ -12,7 +12,7 @@ gem 'sqlite3'
 
 # Ref: https://www.phusionpassenger.com/library/walkthroughs/start/ruby.html
 # Use Passenger as the app server
-gem 'passenger', '~> 5.0', '>= 5.0.26', require: "phusion_passenger/rack_handler"
+gem 'passenger', '~> 5.3', require: "phusion_passenger/rack_handler"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
